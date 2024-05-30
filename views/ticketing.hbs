@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ticketing & Registration</title>
+  <link rel="stylesheet" href="/ticketing.css">
+</head>
+<body>
+  <nav>
+    <ul class="sidebar">
+      <li onclick=hideSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="26px" viewBox="0 -960 960 960" width="26px" fill="#ffffff"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg></a></li>
+      <li><a href="/creation">Event creation</a></li>
+      <li><a href="/dashboard" >Dashboard</a></li>
+      <li><a href="/discovery" >Event Discovery</a></li>
+      <li><a href="/ticketing" >Ticketing</a></li>
+      <li><a href="/login" >Login</a></li>
+      <li><a href="/register" >Register</a></li>
+    </ul>
+    <ul>
+      <li><a href="#">EMS</a></li>
+      <li class="hideOnMobile"><a href="/creation" >Event creation</a></li>
+      <li class="hideOnMobile"><a href="/dashboard" >Dashboard</a></li>
+      <li class="hideOnMobile"><a href="/discovery" >Event Discovery</a></li>
+      <li class="hideOnMobile"><a href="/ticketing" >Ticketing</a></li>
+      <li class="hideOnMobile"><a href="/login" >Login</a></li>
+      <li class="hideOnMobile"><a href="/register" >Register</a></li>
+      <li class="menu-button" onclick=showSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="26px" viewBox="0 -960 960 960" width="26px" fill="#ffffff"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg></a></li>
+    </ul>
+  </nav>
+
+  <script>
+    function showSidebar(){
+      const sidebar = document.querySelector('.sidebar')
+      sidebar.style.display = 'flex'
+    }
+    function hideSidebar(){
+      const sidebar = document.querySelector('.sidebar')
+      sidebar.style.display = 'none'
+    }
+  </script>
+
+  <div class="ticket">
+
+    <form method="POST" action="/event/book">
+        <h2>Book tickets</h2>
+        <p>Name</p>
+        <input type="text" name="name" id="name" required>
+
+        <p>Event title</p>
+        <select id="choose_title" name="choose_title">
+            <option selected="">Please Select</option>
+            <option>Wedding</option>
+            <option>Anniversary</option>
+            <option>Sports</option>
+            <option>Birthday</option>
+            <option>Conferences</option>
+            <option>Awards and Dinners</option>
+            <option>Meetings</option>
+            <option>Educational Events</option>
+            <option>Corporate Events</option>
+            <option>Private Events</option>
+            <option>Christmas Party</option>
+        </select>
+
+        <p>Location</p>
+        <input type="text" name="event_location" id="event_location" required>
+
+        <p>Phone Number</p>
+        <input type="text" name="phone_number" id="phone_number" required>
+
+        <p>Number of Tickets</p>
+        <input type="number" name="no_of_tickets" id="no_of_tickets" required>
+
+        <button type="submit" value="create">Book Event</button>
+
+            {{#if message}}
+            <h4 class="alert alert-danger mt-4">{{message}}</h4>
+            {{/if}}
+            
+        </form>
+  </div>
+
+<script src="ticketing.js"></script>
+</body>
+</html>

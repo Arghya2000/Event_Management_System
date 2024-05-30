@@ -1,0 +1,157 @@
+
+*{
+  margin: 0;
+  padding: 0;
+}
+body{
+  min-height: 100vh;
+  background: url('1.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+nav{
+  background-color: #000;
+  box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.1);
+  padding: 5px;
+}
+nav ul{
+  width: 100%;
+  list-style: none;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+nav li{
+  height: 40px;
+}
+nav a{
+  height: 100%;
+  padding: 0 30px;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  color: #fff;
+  border-left: 1px solid #808080;
+}
+nav li:first-child a{
+  border-left: none;
+}
+
+nav a:hover{
+  background-color: #808080;
+}
+nav li:first-child{
+  margin-right: auto;
+}
+.sidebar{
+  position: fixed;
+  top: 0; 
+  right: 0;
+  height: 100vh;
+  width: 250px;
+  background-color: #808080;
+  box-shadow: -10px 0 10px rgba(0, 0, 0, 0.1);
+  list-style: none;
+  display: none;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.sidebar li{
+  width: 85%;
+  height: 60px;
+}
+.sidebar a{
+  width: 100%;
+  border-bottom: 1px solid #D3D3D3;
+}
+.sidebar a:hover{
+  background-color: #000;
+}
+
+.menu-button{
+  display: none;
+}
+
+
+@media(max-width: 800px){
+  .hideOnMobile{
+    display: none;
+  }
+  .menu-button{
+    display: block;
+  }
+}
+@media(max-width: 400px){
+  .sidebar{
+    width: 100%;
+  }
+}
+
+h2{
+    font-size: 2em;
+    color: #fff;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.search{
+  text-align: center;
+  margin-top: 10px;
+}
+
+input{
+    width: 60%;
+    font-weight: 500px;
+    padding: 8px 20px;
+    background: #fff;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border-color: #fff;
+    border-radius: 25px;
+    backdrop-filter: blur(200px);
+}
+
+.table_details{
+  border-radius: 25px;
+  background-color: #fff;
+  padding: 20px;
+  margin-top: 20px;
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-bottom: 20px;
+}
+
+h3{
+  color: red;
+  font-size: 30px;
+  text-align: center;
+}
+
+.table{
+  width: 90%;
+  margin: auto;
+  background-color: #fff;
+  overflow-x: auto;
+  text-transform: capitalize;
+}
+
+td{
+  padding: 15px;
+  border: 1px solid #000;
+  border-style: outset;
+  border-bottom: 1px solid #ddd;
+  border-color:#808080 ;
+}
+
+tr:hover {background-color: #E5E4E2;}
+
+.table_head_design {
+  background-color: #04AA6D;
+  text-align: center;
+  color: white;
+  font-weight: bold;
+}
+
