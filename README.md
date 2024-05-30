@@ -50,9 +50,10 @@ Technologies Used:
 
 * JavaScript: For implementing client-side functionalities and interactions.
 
-* Node.js: For building the backend server and handling server-side logic.
+* Node.js: For building the backend server and handling server-side logic.  
 
 * MySQL: For database management and storing user/event information.
+
   ~ User Table
 
   ![usertable](https://github.com/Arghya2000/Event_Management_System/assets/105695257/68339eba-03da-4bbf-9e8f-23e076f48c27)
